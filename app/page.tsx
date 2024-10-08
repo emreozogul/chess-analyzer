@@ -1,8 +1,7 @@
 "use client"
+import ChessBoardComponent from "@/components/Chessboard";
 import { useState } from "react";
-import PgnUploader from "./components/PgnUploader";
-import ChessBoardComponent from "./components/Chessboard";
-import StockfishAnalysis from "./components/StockfishAnalysis";
+
 
 const Home: React.FC = () => {
   const [fen, setFen] = useState("start");
@@ -12,11 +11,8 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Chess Game Analyzer</h1>
-      <PgnUploader onFenUpdate={handleFenChange} />
+    <div className="w-full  min-h-full flex flex-col items-center justify-center">
       <ChessBoardComponent onFenChange={handleFenChange} />
-      <StockfishAnalysis fen={fen} />
     </div>
   );
 };
