@@ -118,6 +118,7 @@ const ChessBoardComponent: React.FC<ChessBoardComponentProps> = ({ onFenChange }
                     onDrop={(move) => handleMove(move.sourceSquare as Square, move.targetSquare as Square)}
                     onSquareClick={highlightAvailableMoves}
                     squareStyles={highlightSquares}
+                    width={650}
 
                 />
                 {pendingPromotion && (
